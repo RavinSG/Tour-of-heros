@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
-import {subscribeOn} from 'rxjs/internal/operators';
+
 
 @Component({
   selector: 'app-heroes',
@@ -11,11 +11,6 @@ import {subscribeOn} from 'rxjs/internal/operators';
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
-  hero: Hero;
-
-  onSelect(hero) {
-    this.hero = hero;
-  }
 
   constructor(private heroService: HeroService) { }
 
